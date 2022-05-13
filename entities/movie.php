@@ -6,9 +6,22 @@
 
 <?php 
     class Movie {
+        public $title;
+        public $genre;
+        public $rating = 0;
 
+        function __construct($_rating){
+            $this->rating = $_rating;
+        }   
 
-        
+        public function titleAndGenre(){
+            if($this->rating > 6){
+                return "$this->title - $this->genre";
+            }
+            else{
+                return "Il film non merita di essere visto";
+            }
+        }
     }
     
     
