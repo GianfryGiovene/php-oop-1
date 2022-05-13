@@ -8,18 +8,29 @@
     class Movie {
         public $title;
         public $genre;
+        public $year;   
         public $rating = 0;
+        
 
-        function __construct($_rating){
+        function __construct($_rating,$_year){
             $this->rating = $_rating;
+            $this->year = $_year;
         }   
 
         public function titleAndGenre(){
-            if($this->rating > 6){
-                return "$this->title - $this->genre";
-            }
-            else{
+            
+            if($this->rating >= 8){
+
+                return "Ottimo film da vedere!";
+
+            }elseif($this->rating > 5){
+
+                return "Discreto film da vedere!";
+
+            }else{
+
                 return "Il film non merita di essere visto";
+
             }
         }
     }
