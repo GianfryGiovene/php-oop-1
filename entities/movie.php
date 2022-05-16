@@ -16,7 +16,7 @@
         function __construct($_rating,$_year){
             $this->rating = $_rating;
             $this->year = $_year;
-            $this->removeForData($_year,2000);
+            
         }   
 
         public function titleAndGenre(){
