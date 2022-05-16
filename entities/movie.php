@@ -11,28 +11,31 @@
         public $year;   
         public $rating = 0;
         
+        
 
         function __construct($_rating,$_year){
             $this->rating = $_rating;
             $this->year = $_year;
+            $this->removeForData($_year,2000);
         }   
 
         public function titleAndGenre(){
             
-            if($this->rating >= 8){
+            if($this->rating <= 5){
 
-                return "Ottimo film da vedere!";
+                return "Il film non merita di essere visto";
 
-            }elseif($this->rating > 5){
+            }elseif($this->rating < 8){
 
                 return "Discreto film da vedere!";
 
             }else{
 
-                return "Il film non merita di essere visto";
+                return "Ottimo film da vedere!";
 
             }
         }
+            
     }
     
     
